@@ -64,16 +64,16 @@ function App() {
           onChange={handlePitcherNameChange}
           placeholder="New Pitcher Name"
         />
-        <button type="submit" onClick={() => dispatch ({ type: 'ADD_PITCHER' })}>Add Pitcher</button>
+        <button 
+          type="submit" 
+          onClick={() => dispatch ({ type: 'ADD_PITCHER' })}
+        >
+          Add Pitcher
+          </button>
       </form>
       <ul>
         {pitcherList.map((pitcher, index) => (
-          <li 
-            onClick={() => setCurrentPitcher(pitcher)}
-            key={index}
-          >
-            {pitcher}
-          </li>
+          <li onClick={() => setCurrentPitcher(pitcher)}>{pitcher}</li>
         ))}
       </ul>
       <h3>All Catchers</h3>

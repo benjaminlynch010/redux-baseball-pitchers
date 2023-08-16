@@ -5,8 +5,7 @@ import { applyMiddleware, createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 import logger from 'redux-logger'
 
-const pitcherList = (state = [], action) => {
-  console.log('pitcher reducer')
+const pitcherList = (state = ['Pitch Pitchman'], action) => {
     if (action.type === 'ADD_PITCHER') {
       console.log(`New Pitcher : ${action.payload}`)
       return [...state, action.payload]
@@ -15,7 +14,6 @@ const pitcherList = (state = [], action) => {
   }
 
 const catcherList = (state = [], action) => {
-  console.log('catcher reducer')
     if (action.type === 'ADD_CATCHER') {
       console.log(`New Pitcher : ${action.payload}`)
       return [...state, action.payload]
